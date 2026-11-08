@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sandai Eksplorasi App</title>
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0284c7">
+    <style>
+        :root {
+            --primary: #0284c7;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-sub: #64748b;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            width: 100%;
+            max-width: 480px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        header h1 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+        header p {
+            color: var(--text-sub);
+            font-size: 0.9rem;
+        }
+        .menu-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .menu-card {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border-left: 5px solid var(--primary);
+        }
+        .menu-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+        }
+        .icon {
+            font-size: 2rem;
+            background: #e0f2fe;
+            padding: 12px;
+            border-radius: 10px;
+        }
+        .info h2 {
+            font-size: 1.1rem;
+            margin: 0 0 5px 0;
+        }
+        .info p {
+            margin: 0;
+            font-size: 0.85rem;
+            color: var(--text-sub);
+        }
+        footer {
+            margin-top: auto;
+            text-align: center;
+            font-size: 0.75rem;
+            color: var(--text-sub);
+            padding: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Sandai Eksplorasi App</h1>
+            <p>Pilih menu operasional lapangan</p>
+        </header>
+
+        <div class="menu-grid">
+            <!-- Poin 1: Foto Logging -->
+            <a href="https://script.google.com/macros/s/AKfycbyNxXzoRM_7o2O2aBOQ-IjJthngiIjyJc7kyYYcu2_IV-lEXgauVY6mmYonLM29jZSVnw/exec" class="menu-card" target="_blank">
+                <div class="icon">📸</div>
+                <div class="info">
+                    <h2>Foto Logging</h2>
+                    <p>Unggah dan catat dokumentasi foto temuan lapangan</p>
+                </div>
+            </a>
+
+            <!-- Poin 2: Daily Report -->
+            <a href="https://script.google.com/macros/s/AKfycbzaYLoeUCeFia1JhtTF2XiiSSV0m41Mxg8oNPvZdwI5HYH4htyGuga4f36HEUN6H6ZQJw/exec" class="menu-card" target="_blank">
+                <div class="icon">📊</div>
+                <div class="info">
+                    <h2>Daily Report</h2>
+                    <p>Laporan aktivitas harian progres eksplorasi</p>
+                </div>
+            </a>
+
+            <!-- Poin 3: Dokumentasi Pembayaran -->
+            <a href="https://script.google.com/macros/s/AKfycbw-XncdXWiw0LnCGMgdYZu8J7eE9I8sbsNp-yGJhospuVAwlg7MGc_5T9JzLi2eTgt6/exec" class="menu-card" target="_blank">
+                <div class="icon">💰</div>
+                <div class="info">
+                    <h2>Dokumentasi Pembayaran</h2>
+                    <p>Arsip nota, kuitansi, dan transaksi keuangan</p>
+                </div>
+            </a>
+        </div>
+
+        <footer>
+            &copy; 2026 Sandai Eksplorasi • Powered by YUDI BADRUN
+        </footer>
+    </div>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js')
+                .then(() => console.log('PWA Service Worker Aktif!'));
+        }
+    </script>
+</body>
+</html>
