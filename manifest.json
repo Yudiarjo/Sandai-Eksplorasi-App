@@ -1,6 +1,6 @@
 {
   "name": "Sandai Eksplorasi App",
-  "short_name": "SandaiApp",
+  "short_name": "SandaiExpApp",
   "start_url": "index.html",
   "display": "standalone",
   "background_color": "#f8fafc",
